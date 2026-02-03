@@ -34,7 +34,10 @@ export async function generateMetadata({
   const semester = getSemester(notesCatalog, yearSlug, semesterSlug);
   const subject = getSubject(notesCatalog, yearSlug, semesterSlug, subjectSlug);
   if (!year || !semester || !subject) return {};
-  return { title: `${subject.title} - ${semester.title}` };
+  return {
+    title: `${subject.title} - ${semester.title}`,
+    description: `${subject.notes.length} lecture notes and study materials for ${subject.title} in ${semester.title} of ${year.title}.`,
+  };
 }
 
 export default async function Page({

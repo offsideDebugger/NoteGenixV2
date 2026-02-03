@@ -19,7 +19,12 @@ export async function generateMetadata({
   const { year: yearSlug } = await params;
   const year = getYear(notesCatalog, yearSlug);
   if (!year) return {};
-  return { title: year.title };
+  
+  const subjectCount = year.semesters.reduce((sum, s) => sum + s.subjects.length, 0);
+  return {
+    title: year.title,
+    description: `Browse ${year.semesters.length} semesters and ${subjectCount} subjects of course notes for ${year.title}.`,
+  };
 }
 
 export default async function Page({

@@ -7,6 +7,7 @@ import { YearCards } from "@/components/motion/year-cards";
 
 export const metadata = {
   title: "Browse",
+  description: "Browse course notes organized by year and semester. Find lecture materials, study guides, and exam preparation resources.",
 };
 
 export default function Page() {

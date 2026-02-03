@@ -1,0 +1,47 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#0a0a0a"/>
+  
+  <!-- Grid pattern -->
+  <defs>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  
+  <!-- Gradient orbs -->
+  <circle cx="200" cy="100" r="300" fill="url(#gradient1)" opacity="0.4"/>
+  <circle cx="1000" cy="500" r="350" fill="url(#gradient2)" opacity="0.3"/>
+  
+  <defs>
+    <radialGradient id="gradient1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#3b3b3b"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="gradient2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#2a2a2a"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+  
+  <!-- Logo circle -->
+  <circle cx="600" cy="240" r="60" fill="#ffffff"/>
+  <text x="600" y="258" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="48" font-weight="600" fill="#0a0a0a">N</text>
+  
+  <!-- Title -->
+  <text x="600" y="360" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="72" font-weight="700" fill="#ffffff">NoteGenix</text>
+  
+  <!-- Tagline -->
+  <text x="600" y="420" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" fill="#a1a1a1">Find, preview, and share course notes by year and semester</text>
+  
+  <!-- Stats pills -->
+  <rect x="380" y="480" width="120" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="440" y="507" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#ffffff">36 Subjects</text>
+  
+  <rect x="540" y="480" width="120" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="600" y="507" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#ffffff">100+ Notes</text>
+  
+  <rect x="700" y="480" width="120" height="40" rx="20" fill="rgba(255,255,255,0.1)"/>
+  <text x="760" y="507" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="16" fill="#ffffff">3 Years</text>
+</svg>

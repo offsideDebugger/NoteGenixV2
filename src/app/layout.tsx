@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono, Inter } from "next/font/google";
 import "./globals.css";
 
+import { WebsiteJsonLd, EducationalOrganizationJsonLd } from "@/components/json-ld";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -25,6 +26,50 @@ export const metadata: Metadata = {
     template: "%s | NoteGenix",
   },
   description: "Find, preview, and share course notes by year and semester.",
+  keywords: [
+    "course notes",
+    "study materials",
+    "semester notes",
+    "university notes",
+    "BCA notes",
+    "lecture notes",
+    "exam preparation",
+  ],
+  authors: [{ name: "NoteGenix" }],
+  creator: "NoteGenix",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: getSiteUrl(),
+    siteName: "NoteGenix",
+    title: "NoteGenix",
+    description: "Find, preview, and share course notes by year and semester.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NoteGenix - Course Notes Browser",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "NoteGenix",
+    description: "Find, preview, and share course notes by year and semester.",
+    images: ["/og-image.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -34,6 +79,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+        <WebsiteJsonLd />
+        <EducationalOrganizationJsonLd />
+      </head>
       <body className={`${fontSans.variable} ${fontMono.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
           <div className="min-h-dvh">

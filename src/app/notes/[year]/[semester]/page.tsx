@@ -20,7 +20,10 @@ export async function generateMetadata({
   const year = getYear(notesCatalog, yearSlug);
   const sem = getSemester(notesCatalog, yearSlug, semesterSlug);
   if (!year || !sem) return {};
-  return { title: `${year.title} - ${sem.title}` };
+  return {
+    title: `${year.title} - ${sem.title}`,
+    description: `Browse ${sem.subjects.length} subjects and their notes for ${sem.title} of ${year.title}.`,
+  };
 }
 
 export default async function Page({
