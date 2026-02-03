@@ -42,7 +42,7 @@ export function SiteHeader() {
             title="GitHub"
           >
             <a
-              href="https://github.com/offsideDebugger/NoteGenix"
+              href="https://github.com/offsideDebugger/NoteGenixV2"
               target="_blank"
               rel="noreferrer"
             >
@@ -63,7 +63,7 @@ export function SiteHeader() {
               </SheetHeader>
               <div className="flex flex-col gap-2 px-4">
                 <a
-                  href="https://github.com/offsideDebugger/NoteGenix"
+                  href="https://github.com/offsideDebugger/NoteGenixV2"
                   target="_blank"
                   rel="noreferrer"
                   className="inline-flex items-center gap-2 rounded-md px-3 py-2 text-sm transition hover:bg-accent"

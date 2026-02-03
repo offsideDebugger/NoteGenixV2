@@ -56,7 +56,7 @@ export default function Page() {
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <Button asChild size="lg" variant="outline">
-                <a href="https://github.com/offsideDebugger/NoteGenix" target="_blank" rel="noreferrer">
+                <a href="https://github.com/offsideDebugger/NoteGenixV2" target="_blank" rel="noreferrer">
                   View GitHub
                 </a>
               </Button>

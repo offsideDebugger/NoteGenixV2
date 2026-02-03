@@ -13,7 +13,7 @@ export function SiteFooter() {
             @offsidedebugger
           </a>
           <a
-            href="https://github.com/offsideDebugger/NoteGenix"
+            href="https://github.com/offsideDebugger/NoteGenixV2"
             target="_blank"
             rel="noreferrer"
             className="transition hover:text-foreground"
