@@ -45,7 +45,7 @@ export default function Page() {
                 Browse Notes <ArrowRight className="size-4" />
               </Link>
               <a
-                href="https://github.com/offsideDebugger/NoteGenix"
+                href="https://github.com/offsideDebugger/NoteGenixV2"
                 target="_blank"
                 rel="noreferrer"
                 className={cn(buttonVariants({ size: "lg", variant: "outline" }), "gap-2")}
