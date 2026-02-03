@@ -13,6 +13,7 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  useDragging,
 } from "@/components/ui/dialog";
 import {
   Table,
@@ -27,6 +28,19 @@ function typeIcon(type: NoteFile["type"]) {
   if (type === "slides") return <Presentation className="size-4" />;
   if (type === "doc") return <FileText className="size-4" />;
   return <FileText className="size-4" />;
+}
+
+function PreviewIframe({ note }: { note: NoteFile }) {
+  const isDragging = useDragging();
+  return (
+    <iframe
+      title={note.title}
+      src={getDrivePreviewUrl(note.fileId, note.type)}
+      className="h-full w-full"
+      style={{ pointerEvents: isDragging ? "none" : "auto" }}
+      allow="autoplay"
+    />
+  );
 }
 
 export function NotesTable({
@@ -53,12 +67,7 @@ export function NotesTable({
           </div>
           <div className="aspect-[16/10] w-full">
             {selected ? (
-              <iframe
-                title={selected.title}
-                src={getDrivePreviewUrl(selected.fileId, selected.type)}
-                className="h-full w-full"
-                allow="autoplay"
-              />
+              <PreviewIframe note={selected} />
             ) : null}
           </div>
         </DialogContentDraggable>
