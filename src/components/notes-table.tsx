@@ -63,8 +63,8 @@ export function NotesTable({
       <Table>
         <TableHeader>
           <TableRow>
-            <TableHead>Title</TableHead>
-            <TableHead className="text-right">Open</TableHead>
+            <TableHead className="h-12 pl-5 pr-3">Title</TableHead>
+            <TableHead className="h-12 pl-3 pr-5 text-right">Open</TableHead>
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -72,13 +72,13 @@ export function NotesTable({
             const preview = getDrivePreviewUrl(note.fileId, note.type);
             return (
               <TableRow key={`${note.fileId}-${note.title}`}>
-                <TableCell className="font-medium">
+                <TableCell className="py-3 pl-5 pr-3 font-medium">
                   <div className="flex items-center gap-2">
                     <span className="text-muted-foreground">{typeIcon(note.type)}</span>
                     <span>{note.title}</span>
                   </div>
                 </TableCell>
-                <TableCell className="text-right">
+                <TableCell className="py-3 pl-3 pr-5 text-right">
                   <div className="flex justify-end gap-2">
                     <DialogTrigger asChild>
                       <Button
