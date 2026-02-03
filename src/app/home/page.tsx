@@ -55,11 +55,6 @@ export default function Page() {
             </p>
 
             <div className="flex flex-col gap-3 sm:flex-row">
-              <Button asChild size="lg" className="gap-2">
-                <Link href={`/notes/${years[0]?.slug ?? "first-year"}`}>
-                  Start browsing <ArrowRight className="size-4" />
-                </Link>
-              </Button>
               <Button asChild size="lg" variant="outline">
                 <a href="https://github.com/offsideDebugger/NoteGenix" target="_blank" rel="noreferrer">
                   View GitHub
