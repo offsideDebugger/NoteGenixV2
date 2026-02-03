@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
 import { Button, buttonVariants } from "@/components/ui/button";
 import {
   Dialog,
-  DialogContent,
+  DialogContentDraggable,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -40,9 +40,12 @@ export function NotesTable({
   return (
     <div className="overflow-hidden rounded-2xl border bg-card">
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-4xl p-0">
-          <div className="border-b p-4">
-            <DialogHeader>
+        <DialogContentDraggable className="max-w-4xl p-0">
+          <div
+            data-drag-handle
+            className="cursor-move border-b px-4 py-3 touch-none select-none"
+          >
+            <DialogHeader className="gap-0">
               <DialogTitle className="text-base">
                 {selected ? selected.title : "Preview"}
               </DialogTitle>
@@ -58,55 +61,96 @@ export function NotesTable({
               />
             ) : null}
           </div>
-        </DialogContent>
+        </DialogContentDraggable>
 
-      <Table>
-        <TableHeader>
-          <TableRow>
-            <TableHead className="h-12 pl-5 pr-3">Title</TableHead>
-            <TableHead className="h-12 pl-3 pr-5 text-right">Open</TableHead>
-          </TableRow>
-        </TableHeader>
-        <TableBody>
+        {/* Mobile (no horizontal scroll) */}
+        <div className="divide-y md:hidden">
           {notes.map((note) => {
             const preview = getDrivePreviewUrl(note.fileId, note.type);
-            return (
-              <TableRow key={`${note.fileId}-${note.title}`}>
-                <TableCell className="py-3 pl-5 pr-3 font-medium">
-                  <div className="flex items-center gap-2">
-                    <span className="text-muted-foreground">{typeIcon(note.type)}</span>
-                    <span>{note.title}</span>
-                  </div>
-                </TableCell>
-                <TableCell className="py-3 pl-3 pr-5 text-right">
-                  <div className="flex justify-end gap-2">
-                    <DialogTrigger asChild>
-                      <Button
-                        type="button"
-                        size="sm"
-                        variant="secondary"
-                        className="gap-2"
-                        onClick={() => setSelected(note)}
-                      >
-                        Preview
-                      </Button>
-                    </DialogTrigger>
 
-                    <a
-                      href={preview}
-                      target="_blank"
-                      rel="noreferrer"
-                      className={cn(buttonVariants({ size: "sm" }), "inline-flex gap-2")}
+            return (
+              <div key={`${note.fileId}-${note.title}`} className="px-5 py-4">
+                <div className="flex items-start gap-2">
+                  <span className="mt-0.5 text-muted-foreground">{typeIcon(note.type)}</span>
+                  <p className="min-w-0 font-medium leading-snug">{note.title}</p>
+                </div>
+                <div className="mt-3 flex flex-col gap-2">
+                  <DialogTrigger asChild>
+                    <Button
+                      type="button"
+                      size="sm"
+                      variant="secondary"
+                      className="w-full"
+                      onClick={() => setSelected(note)}
                     >
-                      <ExternalLink className="size-4" /> Open
-                    </a>
-                  </div>
-                </TableCell>
-              </TableRow>
+                      Preview
+                    </Button>
+                  </DialogTrigger>
+
+                  <a
+                    href={preview}
+                    target="_blank"
+                    rel="noreferrer"
+                    className={cn(buttonVariants({ size: "sm" }), "w-full justify-center gap-2")}
+                  >
+                    <ExternalLink className="size-4" /> Open
+                  </a>
+                </div>
+              </div>
             );
           })}
-        </TableBody>
-      </Table>
+        </div>
+
+        {/* Desktop */}
+        <div className="hidden md:block">
+          <Table>
+            <TableHeader>
+              <TableRow>
+                <TableHead className="h-12 pl-5 pr-3">Title</TableHead>
+                <TableHead className="h-12 pl-3 pr-5 text-right">Open</TableHead>
+              </TableRow>
+            </TableHeader>
+            <TableBody>
+              {notes.map((note) => {
+                const preview = getDrivePreviewUrl(note.fileId, note.type);
+                return (
+                  <TableRow key={`${note.fileId}-${note.title}`}>
+                    <TableCell className="py-3 pl-5 pr-3 font-medium whitespace-normal">
+                      <div className="flex items-start gap-2">
+                        <span className="mt-0.5 text-muted-foreground">{typeIcon(note.type)}</span>
+                        <span className="min-w-0 leading-snug">{note.title}</span>
+                      </div>
+                    </TableCell>
+                    <TableCell className="py-3 pl-3 pr-5 text-right">
+                      <div className="flex flex-wrap justify-end gap-2">
+                        <DialogTrigger asChild>
+                          <Button
+                            type="button"
+                            size="sm"
+                            variant="secondary"
+                            className="gap-2"
+                            onClick={() => setSelected(note)}
+                          >
+                            Preview
+                          </Button>
+                        </DialogTrigger>
+
+                        <a
+                          href={preview}
+                          target="_blank"
+                          rel="noreferrer"
+                          className={cn(buttonVariants({ size: "sm" }), "inline-flex gap-2")}
+                        >
+                          <ExternalLink className="size-4" /> Open
+                        </a>
+                      </div>
+                    </TableCell>
+                  </TableRow>
+                );
+              })}
+            </TableBody>
+          </Table>
+        </div>
       </Dialog>
     </div>
   );

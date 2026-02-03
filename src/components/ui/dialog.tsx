@@ -3,6 +3,7 @@
 import * as React from "react"
 import { XIcon } from "lucide-react"
 import { Dialog as DialogPrimitive } from "radix-ui"
+import { LazyMotion, domAnimation, m, useDragControls, useReducedMotion } from "framer-motion"
 
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
@@ -39,7 +40,7 @@ function DialogOverlay({
     <DialogPrimitive.Overlay
       data-slot="dialog-overlay"
       className={cn(
-        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/50",
+        "data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 fixed inset-0 z-50 bg-black/45 backdrop-blur-sm",
         className
       )}
       {...props}
@@ -77,6 +78,59 @@ function DialogContent({
           </DialogPrimitive.Close>
         )}
       </DialogPrimitive.Content>
+    </DialogPortal>
+  )
+}
+
+function DialogContentDraggable({
+  className,
+  children,
+  showCloseButton = true,
+  ...props
+}: React.ComponentProps<typeof DialogPrimitive.Content> & {
+  showCloseButton?: boolean
+}) {
+  const controls = useDragControls()
+  const reduceMotion = useReducedMotion()
+  const constraintsRef = React.useRef<HTMLDivElement | null>(null)
+
+  return (
+    <DialogPortal data-slot="dialog-portal">
+      <DialogOverlay />
+      <div ref={constraintsRef} className="fixed inset-4 z-50 pointer-events-none" />
+      <LazyMotion features={domAnimation}>
+        <DialogPrimitive.Content data-slot="dialog-content" asChild {...props}>
+          <m.div
+            drag={reduceMotion ? false : true}
+            dragControls={controls}
+            dragListener={false}
+            dragMomentum={false}
+            dragElastic={0.06}
+            dragConstraints={constraintsRef}
+            onPointerDown={(event) => {
+              const target = event.target as HTMLElement | null
+              if (!target) return
+              if (!target.closest("[data-drag-handle]")) return
+              controls.start(event.nativeEvent)
+            }}
+            className={cn(
+              "bg-background data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95 fixed left-[50%] top-[50%] z-50 grid w-full max-w-[calc(100%-2rem)] translate-x-[-50%] translate-y-[-50%] gap-4 rounded-lg border p-6 shadow-lg duration-200 outline-none sm:max-w-lg touch-none",
+              className
+            )}
+          >
+            {children}
+            {showCloseButton && (
+              <DialogPrimitive.Close
+                data-slot="dialog-close"
+                className="ring-offset-background focus:ring-ring data-[state=open]:bg-accent data-[state=open]:text-muted-foreground absolute top-4 right-4 rounded-xs opacity-70 transition-opacity hover:opacity-100 focus:ring-2 focus:ring-offset-2 focus:outline-hidden disabled:pointer-events-none [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4"
+              >
+                <XIcon />
+                <span className="sr-only">Close</span>
+              </DialogPrimitive.Close>
+            )}
+          </m.div>
+        </DialogPrimitive.Content>
+      </LazyMotion>
     </DialogPortal>
   )
 }
@@ -148,6 +202,7 @@ export {
   Dialog,
   DialogClose,
   DialogContent,
+  DialogContentDraggable,
   DialogDescription,
   DialogFooter,
   DialogHeader,

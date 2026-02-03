@@ -19,11 +19,12 @@ export default function Page() {
           <div className="space-y-5">
             <div className="flex items-center gap-3">
               <Image
-                src="/assets/selectng.png"
+                src="/assets/new.png"
                 alt="NoteGenix"
                 width={56}
                 height={56}
                 priority
+                className="rounded-full"
               />
               <p className="text-base font-semibold tracking-tight">NoteGenix</p>
             </div>
@@ -110,7 +111,7 @@ export default function Page() {
           </p>
           <div className="mt-4">
             <a
-              href="https://github.com/offsideDebugger/NoteGenix"
+              href="https://github.com/offsideDebugger/NoteGenixV2"
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({ variant: "secondary" })}

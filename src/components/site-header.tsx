@@ -19,7 +19,7 @@ export function SiteHeader() {
       <div className="mx-auto flex w-full max-w-7xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
         <Link href="/" className="flex items-center gap-2">
           <Image
-            src="/assets/selectng.png"
+            src="/assets/new.png"
             alt="NoteGenix"
             width={34}
             height={34}

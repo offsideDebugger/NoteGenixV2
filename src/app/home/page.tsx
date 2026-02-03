@@ -1,5 +1,4 @@
-import { ArrowRight, BookOpen, Layers3, Sparkles } from "lucide-react";
-import Link from "next/link";
+import { BookOpen, Layers3, Sparkles } from "lucide-react";
 
 import { notesCatalog } from "@/lib/notes/catalog";
 import { Card } from "@/components/ui/card";
