@@ -44,20 +44,11 @@ export const metadata: Metadata = {
     siteName: "NoteGenix",
     title: "NoteGenix",
     description: "Find, preview, and share course notes by year and semester.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "NoteGenix - Course Notes Browser",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "NoteGenix",
     description: "Find, preview, and share course notes by year and semester.",
-    images: ["/og-image.png"],
   },
   robots: {
     index: true,
