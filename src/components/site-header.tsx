@@ -24,6 +24,7 @@ export function SiteHeader() {
             width={34}
             height={34}
             priority
+            className="rounded-full"
           />
           <span className="text-base font-semibold tracking-tight">NoteGenix</span>
         </Link>
