@@ -502,8 +502,89 @@ export const notesCatalog: NotesCatalog = {
           subjects: [
             {
               slug: "software-engineering-2",
-              title: "Software Engineering-2",
-              notes: [],
+              title: "Software Engineering-2 ( OOSE )",
+              notes: [
+  {
+    title: "Lecture 1 Software Testing Introduction",
+    fileId: "1Ns84cUU3jY498ojoPtuvyc8uVySk_upF",
+    type: "slides",
+  },
+  {
+    title: "Lecture 2 Testing Fundamentals",
+    fileId: "1DLL2rfjVXJi_GIwbi3VzXupgqOsK04SZ",
+    type: "slides",
+  },
+  {
+    title: "Lecture 3 Software Testing Lifecycle",
+    fileId: "1smz9ngYG24xO3XQxDWAVlcxRf37mV32g",
+    type: "slides",
+  },
+  {
+    title: "Lecture 4 Types of Software Testing",
+    fileId: "1epvbc-WRLgyNThKdBAKk6e2G2dsFaO2U",
+    type: "slides",
+  },
+  {
+    title: "Lecture 5 Testing Levels",
+    fileId: "1VZ4pszFVh7obuMHNWK0tQbMTdW7YKVst",
+    type: "slides",
+  },
+  {
+    title: "Lecture 6 Integration Testing",
+    fileId: "1SUMI5dJnoirgprt5wKpaisa8ahu-JPpX",
+    type: "slides",
+  },
+  {
+    title: "Lecture 7 System Testing",
+    fileId: "19o98J6wleqzhXS1Vy68vZNJm6JWRb8cc",
+    type: "slides",
+  },
+  {
+    title: "Lecture 8 Acceptance Testing",
+    fileId: "10QLBdbv1zbE-x1_f68ME-CKhdvZ7BkZ4",
+    type: "slides",
+  },
+  {
+    title: "Lecture 9 Performance Testing",
+    fileId: "1O9Ml3o8MXar8dy_aRI0xdPsAF0hsG14X",
+    type: "slides",
+  },
+  {
+    title: "Lecture 10 Testing Techniques",
+    fileId: "1BvN80BdGxLxMwQbddEzgCJMJeepZSqXr",
+    type: "slides",
+  },
+  {
+    title: "Lecture 11 Requirements Traceability Matrix - RTM",
+    fileId: "1-B6bjdtTihXBRZu3PRT57pR23n9yiJLt",
+    type: "slides",
+  },
+  {
+    title: "Lecture 12 Compatibility Testing",
+    fileId: "1kRGLNs7y48X6RLXHaLnw88IKBn7j7rsp",
+    type: "slides",
+  },
+  {
+    title: "Lecture 13 Defect Life Cycle",
+    fileId: "1XSKFFIm1UZCBwQp4BpZC7tpBlfYSR_0P",
+    type: "slides",
+  },
+  {
+    title: "Lecture 14 Test Environment",
+    fileId: "1h9R_KL5LpwIWrTLPG90a8Kuxs6NWvRoC",
+    type: "slides",
+  },
+  {
+    title: "Lecture 16 Selenium",
+    fileId: "1Y_5ktsxSxegev_S7JAThRi2uLWNkQbL0",
+    type: "slides",
+  },
+  {
+    title: "Lecture 17 Software Quality",
+    fileId: "1Yc-4vj_kxlX62ALxcLUPoBSiJetAS06Q",
+    type: "slides",
+  },
+],
             },
             {
               slug: "software-testing",
