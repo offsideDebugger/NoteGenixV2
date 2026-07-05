@@ -589,7 +589,93 @@ export const notesCatalog: NotesCatalog = {
             {
               slug: "software-engineering-2",
               title: "Software Engineering-2 ( OOSE )",
-              notes: [],
+              notes: [
+  {
+    title: "ATM All Diagram",
+    fileId: "1JWqemFjGcrM4z6PGpf48sQtzjlu1ga2M",
+    type: "doc",
+  },
+  {
+    title: "UML",
+    fileId: "1HTKnxlpldHfFDj2SDjVcB7WzHnlKS7jt",
+    type: "doc",
+  },
+  {
+    title: "Lecture 1 Introduction",
+    fileId: "1eSFMHYp5eeXfj1smo4KWHimiOUnabfJ2",
+    type: "slides",
+  },
+  {
+    title: "Lecture 1 Introduction 2",
+    fileId: "1b7sR3zoXbqQWjcRQCHrcQvFg1_FZkQZq",
+    type: "slides",
+  },
+  {
+    title: "Lecture 2 UML Introduction",
+    fileId: "1na-yR7tebIIBs-ADnAxoCkjnkU5NZkVY",
+    type: "slides",
+  },
+  {
+    title: "Lecture 3 Use Case",
+    fileId: "1jePkNX8rixPDlTQbVf5xu21nKLVmdfbx",
+    type: "slides",
+  },
+  {
+    title: "Lecture 4 Activity Diagram",
+    fileId: "1L_e2Tc38QIquklcG_H7ZlJMtjQV3JHaz",
+    type: "slides",
+  },
+  {
+    title: "Lecture 5 Sequence Diagram",
+    fileId: "1NjNQnp04W7hbc-TX6STdK_ArzvzSGysw",
+    type: "slides",
+  },
+  {
+    title: "Lecture 5 Sequence Diagram 2",
+    fileId: "18CkV4230R05QARSrdpybDON3DvH6aFtK",
+    type: "slides",
+  },
+  {
+    title: "Lecture 5 State Diagram 1",
+    fileId: "1ZR7yLNwdVVOWCZPyDc7SvPWBeSxIomIR",
+    type: "slides",
+  },
+  {
+    title: "Lecture 6 Class Diagram",
+    fileId: "1Ei9XMprojIsJvZV-2UydcLGNpWPtqRLM",
+    type: "slides",
+  },
+  {
+    title: "Lecture 7 Class Diagram",
+    fileId: "1AasrLW7XcJnLc7_2-t4jCG-wn-c3_0in",
+    type: "slides",
+  },
+  {
+    title: "Lecture 8 State Diagram",
+    fileId: "1yb5EGRAq3rLmoDW7n1PdiAGbhWsef7jI",
+    type: "slides",
+  },
+  {
+    title: "Lecture 9 State Diagram",
+    fileId: "1lzFF3TasDbSaFiEb_ujYycR09fnAutzk",
+    type: "slides",
+  },
+  {
+    title: "Lecture 14 Design Patterns 1",
+    fileId: "1NK-AHABF404qVYsyBaXuYktXmysB0iVD",
+    type: "slides",
+  },
+  {
+    title: "Lecture 15 Design Patterns 2",
+    fileId: "1MIWRUrlcPrHO0e7L0QZ5hCpcAe5CKxHB",
+    type: "slides",
+  },
+  {
+    title: "Lecture 16 Design Patterns 3",
+    fileId: "1lLXLIjyfseDb3nnfqPfSkx3f2Yv_1NYq",
+    type: "slides",
+  },
+],
             },
             {
               slug: "advance-java",
@@ -698,8 +784,8 @@ export const notesCatalog: NotesCatalog = {
 ],
             },
             {
-              slug: "web-application-development",
-              title: "Web Application Development",
+              slug: "computer-networks-security",
+              title: "Computer Networks and Security",
               notes: [],
             },
             {
@@ -727,8 +813,8 @@ export const notesCatalog: NotesCatalog = {
               ],
             },
             {
-              slug: "application-frameworks-in-java",
-              title: "Application Frameworks in Java",
+              slug: "advance-python",
+              title: "Advance Python",
               notes: [],
             },
             {
