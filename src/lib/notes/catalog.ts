@@ -691,7 +691,7 @@ export const notesCatalog: NotesCatalog = {
     type: "slides",
   },
   {
-    title: "Servlet 7 & JSP 1",
+    title: "Servlet 7 JSP 1",
     fileId: "1WH46iR5PFIwuZ24acORMDgWc9GnCeMmi",
     type: "slides",
   },
