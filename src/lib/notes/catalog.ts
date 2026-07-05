@@ -501,8 +501,8 @@ export const notesCatalog: NotesCatalog = {
           legacyPath: "/HTML/tysem1.html",
           subjects: [
             {
-              slug: "software-engineering-2",
-              title: "Software Engineering-2 ( OOSE )",
+              slug: "software-testing",
+              title: "Software Testing and Quality Assurance",
               notes: [
   {
     title: "Lecture 1 Software Testing Introduction",
@@ -587,8 +587,8 @@ export const notesCatalog: NotesCatalog = {
 ],
             },
             {
-              slug: "software-testing",
-              title: "Software Testing",
+              slug: "software-engineering-2",
+              title: "Software Engineering-2 ( OOSE )",
               notes: [],
             },
             {
