@@ -592,9 +592,110 @@ export const notesCatalog: NotesCatalog = {
               notes: [],
             },
             {
-              slug: "mobile-application-development",
-              title: "Mobile Application Development",
-              notes: [],
+              slug: "advance-java",
+              title: "Advance Java",
+              notes: [
+  {
+    title: "Callable Statement",
+    fileId: "1TFMs2wLBp5ri-iB4Rmq172h1N7RMcy-z",
+    type: "doc",
+  },
+  {
+    title: "Hibernate Framework",
+    fileId: "14zsR4SqZig3AWckXsn-7i2hXU3L0FhVE",
+    type: "doc",
+  },
+  {
+    title: "Prepared Statement",
+    fileId: "1uwFZGEB3UTk412-K7G_FWheA0vvdWUbn",
+    type: "doc",
+  },
+  {
+    title: "ResultSet Type",
+    fileId: "1xNMxMVyG9Ah5EQ8C5h8Vf-UOhfnPmJ_E",
+    type: "doc",
+  },
+  {
+    title: "Servlet 12",
+    fileId: "11Bqq-FYhlpK_ALmbWE5MNgCYbORQGWXg",
+    type: "doc",
+  },
+  {
+    title: "JDBC 1",
+    fileId: "1PHAEZsq1zv_EtSMdwi3L6lRni1XHKr-M",
+    type: "slides",
+  },
+  {
+    title: "JDBC 2",
+    fileId: "1OFQdnvvAWDyCWoyXCycBEBmfBCLv4uMD",
+    type: "slides",
+  },
+  {
+    title: "JDBC 3",
+    fileId: "1YY4u0m0GZQ_3pWdjThE4B_wQgKQMyvaQ",
+    type: "slides",
+  },
+  {
+    title: "JDBC 4",
+    fileId: "1aDq2pseHupz4G74Q8PrHms99Z2oW8NeF",
+    type: "slides",
+  },
+  {
+    title: "JDBC 5",
+    fileId: "1pjw1QBCZkk9kZx7hVgS33lSMl-qySZlH",
+    type: "slides",
+  },
+  {
+    title: "JDBC 6",
+    fileId: "1InkeuRnoiOAoUnqQ3lWCHNlohbSvGS0j",
+    type: "slides",
+  },
+  {
+    title: "JDBC 7",
+    fileId: "14NXU4LPpxvSxntuscBg5iO2RXukB5ZHu",
+    type: "slides",
+  },
+  {
+    title: "JDBC 8",
+    fileId: "1vSPVrMXlEeOqVfFpv__fGw0YBJZeChpA",
+    type: "slides",
+  },
+  {
+    title: "JSP 1",
+    fileId: "1QPkL4UgtwUJpsB0AmkqVoQ8mAMNaFcrk",
+    type: "slides",
+  },
+  {
+    title: "Servlet 1",
+    fileId: "1fOdun9Qkq-KO4NP5QIcQW8yYpQnabjZu",
+    type: "slides",
+  },
+  {
+    title: "Servlet 3",
+    fileId: "1sE6yw1OlJujoXsIz8dWCM-KRvC-rpyt1",
+    type: "slides",
+  },
+  {
+    title: "Servlet 4",
+    fileId: "1z5PrxdP-6OsAgTQkeWCdDX65y23c_DFU",
+    type: "slides",
+  },
+  {
+    title: "Servlet 5",
+    fileId: "15ddK9IjEjMozrcn13T3INfHuv0YlKQLm",
+    type: "slides",
+  },
+  {
+    title: "Servlet 6",
+    fileId: "196FDXimNaX-ObUbsh5J3_ERXSb6bv1--",
+    type: "slides",
+  },
+  {
+    title: "Servlet 7 & JSP 1",
+    fileId: "1WH46iR5PFIwuZ24acORMDgWc9GnCeMmi",
+    type: "slides",
+  },
+],
             },
             {
               slug: "web-application-development",
