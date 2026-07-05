@@ -523,7 +523,11 @@ export const notesCatalog: NotesCatalog = {
             {
               slug: "algorithm-design-and-analysis",
               title: "Algorithm Design and Analysis",
-              notes: [],
+              notes: [{
+                title:"Unit 1 - Introduction to algorithm",
+                fileId:"1_Jb72aY3szIhbLCQDi0rpUnxVwJ6eQ8r",
+                type:"slides"
+              }],
             },
             {
               slug: "application-frameworks-in-java",
