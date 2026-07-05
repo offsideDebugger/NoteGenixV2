@@ -524,10 +524,25 @@ export const notesCatalog: NotesCatalog = {
               slug: "algorithm-design-and-analysis",
               title: "Algorithm Design and Analysis",
               notes: [{
-                title:"Unit 1 - Introduction to algorithm",
+                title:"Introduction to Algorithms",
                 fileId:"1_Jb72aY3szIhbLCQDi0rpUnxVwJ6eQ8r",
                 type:"slides"
-              }],
+              },{
+                title:"Divide and Conquer Algorithms",
+                fileId:"1Oy6zD3gnzXybXRGb6PXK37HQlkLGIcdw",
+                type:"slides"
+              },
+              {
+                title:"Sorting Algorithms - Cheat Sheet",
+                fileId:"1O7Gp33rPuQAZOoqF-9Ix-u36Hl6JmKhQ",
+                type:"pdf"
+              },
+              {
+                title:"Algorithms cheat sheet",
+                fileId:"1rN_r742diVV0_-vD5toPLf_EbLFkJth-",
+                type:"pdf"
+              }
+              ],
             },
             {
               slug: "application-frameworks-in-java",
